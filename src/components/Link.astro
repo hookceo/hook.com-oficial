@@ -5,7 +5,7 @@
 interface Props {
   text: string;
   href: string;
-  style: "primary" | "secondary";
+  style?: "primary" | "secondary";
   icon?: {
     name: string;
     side: "left" | "right";
@@ -37,17 +37,9 @@ const {
   ]}
   {...rest}
 >
-  {
-    icon && icon.side === "left" && (
-      <Icon name={icon.name} height="24" width="24" />
-    )
-  }
+
 
   <span>{text}</span>
 
-  {
-    icon && icon.side === "right" && (
-      <Icon name={icon.name} height="24" width="24" />
-    )
-  }
+
 </a>
