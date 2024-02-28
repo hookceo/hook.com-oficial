@@ -1,0 +1,89 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Link from "../../components/Link.astro";
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+import FullCard from "../../components/FullCard.astro";
+---
+
+
+
+<Layout 
+title="Hook Technologies"
+
+
+/>
+
+<Header/>
+
+
+
+<div class="flexcenter">
+<div>
+
+
+    <h1>Hook products are under development. </h1>
+    <h2>Hook products are going to available earlier this year.</h2>
+   <div class="link"><Link href="" text="Become Donator | Grant Previous Access" /></div> 
+</div>
+</div>
+
+<hr class="hrfooter">
+<Footer/>
+
+
+
+<style>
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+
+    }
+
+    .link {
+        color: black;
+        text-decoration: none;
+        background-color: rgb(246, 246, 246);
+        padding: 10px;
+        border-radius: 6px;
+        width: fit-content;
+
+    }
+
+    @media (prefers-color-scheme: dark) {
+  h1, h2, h3 {
+    color: white;
+  }
+
+  .link {
+    color: white;
+    background-color: rgb(32, 32, 32);
+  }
+
+  html {
+    background-color: rgb(20, 20, 20);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: white;
+    }
+}
+
+    	
+	.hrfooter {
+		margin-top: 60px;
+		margin-bottom: 0px;
+	}
+
+    .flexcenter {
+    display: flex;
+        justify-content: center; /* Centrado horizontal */
+        align-items: center; /* Centrado vertical */
+
+        height: 70vh;
+    }
+</style>

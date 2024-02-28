@@ -1,0 +1,185 @@
+---
+
+
+import Link from "./Link.astro";
+
+interface Props { 
+}
+
+const {  } = Astro.props;
+const currentYear = new Date().getFullYear()
+---
+
+
+
+
+<div>
+
+ 
+    <div class="all">
+
+        <div class="lefttop">
+            <h1>hook</h1>
+            <h5>Copyright {currentYear} Hook Technologies Corporation. All rights reserved.</h5>
+        </div>
+
+        <div class="rightbottom">
+            <div class="column">
+                <h2>Terms</h2>
+                <div class="links">
+                    <Link 
+                    text="Terms of Service"
+                    href="/tos/"
+                    />
+                    <a href=""><h3>Terms of Privacy</h3></a>
+                    <a href=""><h3>Terms of Use</h3></a>
+                </div>
+            </div>
+            <div class="column">
+                <h2>Products</h2>
+                <div class="links-products">
+                    <div class="">
+
+                    
+                    <h4>Software</h4>
+                    <a href=""><h3>Nova</h3></a>
+                    <a href=""><h3>Magazine</h3></a>
+                    <a href=""><h3>Home</h3></a>
+                </div>
+                <div class="">
+                    <h4>Hardware</h4>
+                    <a href=""><h3>Display</h3></a>
+                </div>
+                </div>
+            </div>
+            <div class="column">
+                <h2>Resources</h2>
+                <div class="links">
+
+                    <a href=""><h3>Blog</h3></a>
+                    <a href=""><h3>How-to</h3></a>
+                    <a href=""><h3>Support</h3></a>
+                    <a href=""><h3>Hook for Business</h3></a>
+                    <a href=""><h3>Advertise</h3></a>
+                    <a href=""><h3>Documentation</h3></a>
+                    <Link text="Beta Access" href="/nova/joinbeta/"/>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+ 
+
+
+
+</div>
+
+
+<style>
+  .rightbottom {
+    display: flex;
+
+    gap: 10%;
+}
+
+
+    .all {
+        display: flex;
+        gap: 20%;
+     
+
+    }
+
+    @media screen and (max-width: 950px) {
+        .all{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0%;
+        }
+    }
+
+    .column {
+
+width: 200px;
+    }
+
+    h2 {
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 20px;
+    }
+
+    html {
+        font-family: 'SF Pro Display', sans-serif;
+    }
+    h3, a{
+        text-decoration: none;
+
+        font-weight: 400;
+        font-size: 15px;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    @media (prefers-color-scheme: dark) {
+        h3, a, h2, h1 {
+            color: white;
+        }
+
+
+    }
+
+    @media (prefers-color-scheme: light) {
+        h3, a, h2, h1 {
+            color: black;
+        }
+    }
+
+    .lefttop {
+
+        align-items: baseline;
+        text-align: left;
+    }
+
+    h5 {
+        color: rgb(91, 91, 91);
+        font-weight: 500;
+    }
+    h1 {
+        height: 20px;
+        margin-top: 5px;
+        font-family: "Charter", sans-serif;
+    }
+
+    h3:hover, a:hover {
+        color: rgb(132, 132, 132);
+    }
+
+    .links-products {
+        display: flex;
+        gap: 50px;
+    }
+
+    h4 {
+        color: rgb(67, 67, 67);
+        font-size: 12px;
+        margin: 0px;
+
+    }
+
+.all {
+padding: 60px;
+    }
+
+    @media screen and (max-width: 950px) {
+    .rightbottom {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .all {
+    padding: 0px;
+    }
+}
+
+</style>

@@ -1,0 +1,232 @@
+---
+import Link from "../../components/Link.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import testflight from 'Assets/testflight.png';
+import Layout from "../../layouts/Layout.astro";
+---
+
+
+<Layout 
+title="Hook Technologies"
+
+
+/>
+<Header/>
+
+<div class="all">
+    <div class="right">
+    <h1>Download Beta</h1>
+        <div class="appselect">
+            <h2>I want to try out </h2>
+            <h3 class="selected">nova</h3>
+            <h3>magazine</h3>
+            <h3>home</h3>
+        </div>
+        <h4 class="underline">Tap to download</h4>
+</div>
+
+    <div class="left">
+        <div class="section">
+            <div class="number">
+                <h4>1.</h4>
+            </div>
+            
+            <img
+                src="/Assets/testflight.png"
+                width="50"
+                height="50"
+                decoding="async"
+                loading="lazy"
+                alt="TestFlight Icon"
+/>
+            <h4>Get TestFlight</h4>
+
+
+        </div>
+        <div class="section">
+            <div class="number">
+            <h4>2.</h4>
+        </div>
+            
+            <img
+                src="/Assets/nova.png"
+                width="50"
+                height="50"
+                decoding="async"
+                loading="lazy"
+                alt="TestFlight Icon"
+/>
+            <h4>Join the Beta</h4>
+
+
+        </div>
+<div class="note">
+
+
+            <h2>Note. Beta Access and Testing is temporarily exclusive for IOS testers.</h2>
+        </div>
+    </div>
+</div>
+<hr class="hrfooter">       
+<Footer/>
+
+
+
+<style>
+
+
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: white;
+    }
+}
+
+.section{
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.appselect {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    margin-top: -20px;
+
+}
+
+.hrfooter {
+		margin-top: 60px;
+		margin-bottom: 0px;
+	}
+
+.note {
+    width: 350px;
+}
+.number {
+    width: 10px;
+}
+
+
+.all {
+        display: flex;
+        justify-content: center; /* Centrado horizontal */
+        align-items: center; /* Centrado vertical */
+       margin-top: 60px;
+        gap: 20%;
+    }
+
+    @media screen and (max-width: 990px) {
+
+        .all {
+            display: block;
+        justify-content: center; /* Centrado horizontal */
+        align-items: center; /* Centrado vertical */
+        padding: 40px;
+
+            
+    } 
+
+    .right {
+        margin-bottom: 80px;
+    }
+    }
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+h3 {
+    font-family: "Charter", sans-serif;
+    font-size: 23px;
+    color: rgb(184, 184, 184);
+    font-weight: 600;
+
+}
+
+.left {
+    padding: 30px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+
+}
+
+h3.selected{
+    color: black;
+}
+
+h4 {
+    font-weight: 400;
+
+}
+
+.underline {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(184, 184, 184);
+}
+
+@media screen and (max-width: 490px) {
+
+.left {
+padding: 20px;
+background-color: rgb(245, 245, 245);
+border-radius: 20px;
+
+}
+
+.right{
+
+    padding: 20px;
+background-color: rgb(245, 245, 245);
+border-radius: 20px;
+margin-bottom:10px;
+}
+
+.all {
+    padding: 10px;
+}
+}
+
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: rgb(20, 20, 20);
+    }
+
+    h1,h4 {
+        color: white;
+    }
+
+    h3.selected{
+        color: white;
+    }
+
+    h3 {
+        color: rgb(65, 65, 65);
+    }
+
+    .left {
+        background-color: rgb(28, 28, 28);
+    }
+
+    @media screen and (max-width: 490px) {
+        .right{
+            background-color: rgb(28, 28, 28);  
+        }
+    }
+}
+
+</style>
+
+

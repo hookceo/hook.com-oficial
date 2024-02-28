@@ -1,0 +1,124 @@
+---
+import Link from './Link.astro';
+interface Props {
+    
+}
+const { } = Astro.props;
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charter-webfont@4/charter.min.css" />
+<div class="all">
+<div class="left">
+    <a href="/">
+    <h1>hook</h1>
+</a>
+</div>
+
+<div class="prod">
+    <h1 class="littletitle">Products</h1>
+    <div class="flex">
+<div class="link"><Link text='Nova' href='/nova/nova/'/></div>
+<div class="link"><Link text='Magazine' href='/nova/nova/'/></div>
+<div class="link"><Link text='Home' href='/nova/nova/'/></div>
+<div class="link"><Link text='Display' href='/nova/nova/'/></div>
+ 
+    </div>
+</div>
+
+</div>
+
+
+
+<style>
+
+    html, a, h1, h2 {
+        text-decoration: none;
+    }
+h1 {
+        font-family: "Charter", sans-serif;
+        font-size: 25px;
+    }
+
+
+    .link {
+        color: rgb(0, 0, 0);
+    }
+
+
+
+    .all {
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        align-items: center; /* Alineación vertical al centro */
+        justify-content: space-between;
+        font-size: 13px;
+        font-family: "Charter", sans-serif;
+        font-weight: 600;
+        color: black;
+
+    }
+
+    .flex {
+        display: flex;
+        align-items: last baseline; /* Alineación vertical al centro */
+        gap: 20px;
+        margin-bottom: -7px;
+
+
+
+    }
+
+
+
+ 
+
+    .littletitle {
+        font-size: 9px;
+        font-family: 'SF Pro Display', sans-serif;
+        height: 0px;
+        margin-top: auto;
+        margin-bottom: 7px;
+        margin-left: -50px;
+
+    }
+
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 13px;
+        font-family: "Charter", sans-serif;
+        
+        transition: all 0.3s ease 0s;
+     
+    }
+
+    @media (prefers-color-scheme: dark) {
+      
+
+        h2 {
+            border-radius: 5px solid black;
+            border-radius: 1px;
+        }
+        h1, h2 {
+            color: white;
+        }
+
+        .link {
+            color: white;
+        }
+    }
+    @media (prefers-color-scheme: light) {
+     
+        h2 {
+            border-radius: 5px solid black;
+            border-radius: 1px;
+        }
+        h1, h2 {
+            color: black;
+        }
+    }
+
+    h2:hover {
+
+        border-radius: 1px;
+    }
+</style>

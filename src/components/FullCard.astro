@@ -1,0 +1,241 @@
+---
+
+interface Props {
+    title: string;
+    subtitle?: string;
+	hrefcustom: string;
+	appicon: string;
+	desc?: String; 
+	backgroundimage?: String;
+    button1?: String;
+    button2?: String;
+    button3?: String;
+    button1href?: String;
+    button2href?: String;
+    button3href?: String;
+}
+import Link from './Link.astro';
+
+const { title, subtitle, hrefcustom, appicon, desc, backgroundimage, button1, button2, button3, button1href, button2href, button3href } = Astro.props
+---
+
+
+<div class="ex">
+
+    <div class="exnor">
+        <div class="exnornor">
+    <h1 class="app-title">{title}</h1>
+    <h3 class="app-subtitle">{subtitle}</h3>
+    <h2 class="desc">{desc}</h2>
+    <div class="buttonsflex">
+   <div class="link"><Link text={button1} href={button1href}/></div>
+   <div class="link"><Link text={button2} href={button2href}/></div>
+   <div class="link"><Link text={button3} href={button3href}/></div>
+</div>
+	<div class="bottom-align">
+		<a href={hrefcustom}>
+
+        
+	</a>
+	</div>
+</div>
+</div>
+
+
+<img class="icon" src={appicon} alt="nova-icon">
+
+</div>
+
+<style  define:vars={{ image: `url("${backgroundimage}")` }}>
+	
+	
+    
+    
+    
+.link {
+    color: white;
+    text-decoration: underline;
+}
+
+    .icon  {
+        height: 40px;
+		width: 40px;
+		margin: 0px;
+        border-radius: 12px;
+		border: 2px solid rgb(61, 61, 61);
+    }
+
+   
+    .boxes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 10px;
+		column-gap: 10px;
+
+	}
+
+	.flex-bottom {
+		display: flex;
+		justify-content: space-between;
+	}
+
+    .ex {
+    position: relative;
+    padding: 0px;
+}
+
+.nova-iconn {
+        position: absolute; /* Para posicionar la imagen absolutamente dentro del contenedor */
+        width: 100%; /* Ocupa el 100% del ancho del contenedor */
+        height: 100%; /* Ocupa el 100% del alto del contenedor */
+        top: 0; /* Coloca la imagen en la parte superior del contenedor */
+        left: 0; /* Coloca la imagen en la parte izquierda del contenedor */
+		object-fit: cover;
+    }
+.icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+
+.icon > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+    .buttonsflex {
+        display: flex;
+        gap: 20px;
+        text-align: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .exnornor {
+
+    align-items: center;
+    justify-content: center;
+	padding: 30px;
+    text-align: center;
+    padding-top: 250px;
+
+
+ 
+    }
+
+    .exnor {
+        width: 100%;
+        height: 100% ;
+        background-color: rgba(0, 0, 0, 0.24);
+		backdrop-filter: blur(25px);
+
+		border-radius: 0px;
+
+		transition: all 0.3s ease 0s;
+    }
+
+    a > *{
+        margin: 0px;
+        width: fit-content;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+        color: gray;
+        text-decoration: underline;
+
+    }
+
+    .desc {
+        margin: 0px;
+
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(222, 222, 222);
+
+    }
+	.ex {
+		background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
+        height: 90.5vh; /* La altura será el 100% de la vista */
+        background-image: var(--image);
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+       min-width: 360px;
+        margin-bottom: 10px;
+        min-height: 600px;
+        max-height: 700px;
+        
+	}
+
+	.nova-icon {
+		height: 60px;
+		width: 60px;
+		margin: 0px;
+		border-radius: 12px;
+		border: 1px solid gray;
+
+	}
+
+	.app-title {
+		color: rgb(255, 255, 255);
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 35px;
+		margin: 0px;
+
+
+	}
+	.ex {
+   
+
+	}
+
+	a{
+		text-decoration: none;
+	}
+	.text-app {
+		margin-left: 10px;
+		
+	}
+
+	.app-subtitle {
+		color: rgb(75, 75, 75);
+		font-family: 'SF Pro Display', sans-serif;
+		font-weight: 400;
+		font-size: 15px;
+		margin: 0px;
+		overflow: hidden;
+   		display: -webkit-box;
+   		-webkit-line-clamp: 1; /* number of lines to show */
+        line-clamp: 1; 
+   		-webkit-box-orient: vertical;
+		mix-blend-mode: hard-light;
+	}
+
+	.nova-description {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+		background-color: rgba(244, 244, 244, 0.24);
+		backdrop-filter: blur(25px);
+		padding: 10px;
+		border-radius: 20px;
+		border: 2px solid rgba(246, 246, 246, 0.14);
+		transition: all 0.3s ease 0s;
+	
+	}
+
+	.nova-description:hover {
+		border: 2px solid rgba(255, 255, 255, 0.24);
+
+	}
+
+</style>
+
