@@ -1,0 +1,155 @@
+---
+
+import Link from "./Link.astro";
+
+interface Props {
+	title: string;
+	href: string;
+	appicon: string;
+	desc: String; 
+	backgroundimage: String;
+}
+
+const { title, href, appicon, desc, backgroundimage } = Astro.props;
+---
+
+<div class="ex">
+	
+
+	<div class="bottom-align">
+
+		<div class="nova-description">
+			<img src={appicon} alt="nova-icon" class="nova-icon">
+
+			<div class="text-app">
+				<div class="flex-bottom">
+				<h1 class="app-title">{title}</h1>
+				<svg
+  					width="20"
+  					height="20"
+  					viewBox="0 0 24 24"
+  					fill="none"
+  					xmlns="http://www.w3.org/2000/svg"
+				>
+  				<path
+   				 d="M10.5253 5.49475L10.5206 7.49475L15.0782 7.50541L5.47473 17.0896L6.88752 18.5052L16.5173 8.89479L16.5065 13.5088L18.5065 13.5134L18.5253 5.51345L10.5253 5.49475Z"
+  				  fill="rgba(144, 144, 144, 0.74)"
+  />
+</svg>
+			</div>
+				<h1 class="app-subtitle">{desc}</h1>
+			</div>	
+		</div>
+	</Link>
+	</div>
+
+
+</div>
+
+<style  define:vars={{ image: `url("${backgroundimage}")` }}>
+	
+	.boxes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 10px;
+		column-gap: 10px;
+
+	}
+
+	.flex-bottom {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.ex {
+		background-color: rgb(0, 0, 0);
+    height: 320px;
+    background-image: var(--image);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+	min-width: 300px;
+
+	position: relative;
+		
+	}
+
+
+
+	.nova-icon {
+		height: 40px;
+		width: 40px;
+		margin: 0px;
+		border-radius: 12px;
+		border: 1px solid gray;
+
+	}
+
+	.nova-iconn {
+        position: absolute; /* Para posicionar la imagen absolutamente dentro del contenedor */
+        width: 100%; /* Ocupa el 100% del ancho del contenedor */
+        height: 100%; /* Ocupa el 100% del alto del contenedor */
+        top: 0; /* Coloca la imagen en la parte superior del contenedor */
+        left: 0; /* Coloca la imagen en la parte izquierda del contenedor */
+		object-fit: cover;
+    }
+
+	.app-title {
+		color: rgb(255, 255, 255);
+		font-family: "Charter", sans-serif;
+		margin: 0px;
+		font-size: 18px;
+
+
+	}
+	.ex {
+    display: flex;
+    align-items: end;
+	padding: 30px;
+
+	}
+
+	a{
+		text-decoration: none;
+	}
+	.text-app {
+		margin-left: 10px;
+		
+	}
+
+	.app-subtitle {
+		color: rgb(75, 75, 75);
+		font-family: 'SF Pro Display', sans-serif;
+		font-weight: 400;
+		font-size: 15px;
+		margin: 0px;
+		overflow: hidden;
+   		display: -webkit-box;
+   		-webkit-line-clamp: 1; /* number of lines to show */
+        line-clamp: 1; 
+   		-webkit-box-orient: vertical;
+
+		margin-right: 30px;
+	}
+
+	.nova-description {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+
+		backdrop-filter: blur(25px);
+		padding: 10px;
+		border-radius: 20px;
+		border: 2px solid rgba(246, 246, 246, 0.128);
+		transition: all 0.3s ease 0s;
+
+		
+	
+	}
+
+	.nova-description:hover {
+		border: 2px solid rgba(255, 255, 255, 0.24);
+
+	}
+
+</style>
