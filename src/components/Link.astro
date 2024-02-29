@@ -5,7 +5,7 @@
 interface Props {
   text: string;
   href: string;
-  style?: "primary" | "secondary";
+
   icon?: {
     name: string;
     side: "left" | "right";
@@ -18,7 +18,7 @@ interface Props {
 const {
   text,
   href,
-  style,
+
   icon,
   isFilled = true,
   borderVisible = false,
@@ -32,7 +32,7 @@ const {
   class:list={[
     "link",
     classes,
-    style,
+
     { filled: isFilled, bordered: borderVisible },
   ]}
   {...rest}
