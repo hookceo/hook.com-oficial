@@ -17,6 +17,7 @@ interface Props {
 import Link from './Link.astro';
 
 const { title, subtitle, hrefcustom, appicon, desc, backgroundimage, button1, button2, button3, button1href, button2href, button3href } = Astro.props
+
 ---
 
 
@@ -28,9 +29,9 @@ const { title, subtitle, hrefcustom, appicon, desc, backgroundimage, button1, bu
     <h3 class="app-subtitle">{subtitle}</h3>
     <h2 class="desc">{desc}</h2>
     <div class="buttonsflex">
-   <div class="link"><Link text="{button1}" href="{button1href}"/></div>
-   <div class="link"><Link text="{button2}" href="{button1href}"/></div>
-   <div class="link"><Link text="{button3}" href="{button1href}"/></div>
+   <div class="link"><Link text=`It's ${button1}` href=`It's ${button1href}`/></div>
+   <div class="link"><Link text=`It's ${button2}` href=`It's ${button2href}`/></div>
+   <div class="link"><Link text=`It's ${button3}` href=`It's ${button3href}`/></div>
 </div>
 	<div class="bottom-align">
 		<a href={hrefcustom}>
