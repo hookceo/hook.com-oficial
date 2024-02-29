@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
+import PurchaseView from '../components/PurchaseView.astro';
+import FullCard from '../components/FullCard.astro';
+import Header from '../components/Header.astro';
+import Link from '../components/Link.astro';
+
+---
+
+<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charter-webfont@4/charter.min.css" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#515151">
+<meta name="apple-mobile-web-app-title" content="Hook Tech">
+<meta name="application-name" content="Hook Tech">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+
+
+
+<Layout 
+title="Hook Technologies"
+
+
+/>
+
+
+
+<Header/>
+<div class="allbox">
+<FullCard
+title='Nova is near'
+subtitle='Remind me when Nova is ready'
+button1href= "/nova/nova"
+button1= "Remind Me"
+button2href= "/nova/nova"
+button2= "Join Beta"
+button3href= "/nova/nova"
+button3= "Learn More"
+appicon = "Assets/Screenshot 2024-01-25 at 8.18 1.webp"
+backgroundimage="Assets/waldemar-mad-405bV4Lh5U4-unsplash 2.webp"
+desc= "The all-in-one learner platform."
+subtitle=""
+hrefcustom=""
+
+/>
+
+<!-- https://pixboost.com/api/2/img/[IMAGE_URL|IMAGES_SOURCE_ALIAS_WITH_PATH]/[OPERATION]?[OPERATION_PARAMS]&auth=MTg4MjMxMzM3MA -->
+<!-- https://pixboost.com/api/2/img/[IMAGE_URL|IMAGES_SOURCE_ALIAS_WITH_PATH]/[OPERATION]?[OPERATION_PARAMS]&auth=[API_KEY] -->
+
+
+<div class="boxes">
+
+<Card
+
+title='nova'
+appicon = "Assets/Frame 1.png"
+desc= "The all-in-one learner platform."
+backgroundimage="Assets/Group 200.webp"
+
+href="src/pages/nova/nova.astro"
+
+/>
+<!-- 200 -->
+
+
+<Card
+
+title='magazine'
+appicon = "Assets/Frame 2.png"
+desc= "The world through hook eyes."
+backgroundimage="Assets/Group 205.webp"
+
+href=""
+
+/>
+
+<Card 
+
+title='home'
+appicon = "Assets/Frame 3.png"
+desc= "A real touch with hook."
+backgroundimage="Assets/Group 206.webp"  
+href=""
+
+/>
+
+<!--  -->
+
+
+<PurchaseView
+productname='Display'
+backgroundimage="Assets/waldemar-mad-405bV4Lh5U4-unsplash 2.webp"
+href=""
+/>
+
+
+
+
+
+
+</div>
+</div>
+<hr class="hrfooter">
+
+<Footer/>
+
+<style>
+
+	html {
+		height: 100%;
+		width: 100%;
+
+		scrollbar-width: none;
+
+	}
+
+	html:: ::-webkit-scrollbar {
+		display: none;
+	}
+
+	@media (prefers-color-scheme: dark) {
+    html {
+        background-color: rgb(20, 20, 20);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: white;
+    }
+}
+
+	
+	.hrfooter {
+		margin-top: 60px;
+		margin-bottom: 0px;
+	}
+
+	.boxes {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 10px;
+		column-gap: 10px;
+
+	}
+
+	@media screen and (max-width: 950px) {
+
+		.boxes {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.flex-bottom {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.ex {
+		background-color: rgb(255, 255, 255);
+		height: 400px;
+		background-image: url("Assets/waldemar-mad-405bV4Lh5U4-unsplash 2.png");
+		
+	}
+
+	.nova-icon {
+		height: 80px;
+		width: 80px;
+		margin: 0px;
+		border-radius: 12px;
+
+	}
+
+	.app-title {
+		color: rgb(0, 0, 0);
+		font-family: "Charter", sans-serif;
+		margin: 0px;
+
+	}
+	.ex {
+    display: flex;
+    align-items: end;
+	padding: 30px;
+
+	}
+
+	a{
+		text-decoration: none;
+	}
+	.text-app {
+		margin-left: 10px;
+	}
+
+	.app-subtitle {
+		color: rgb(46, 46, 46);
+		font-family: 'SF Pro Display', sans-serif;
+		font-weight: 400;
+		font-size: 20px;
+		margin: 0px;
+	}
+
+	.nova-description {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+		background-color: rgba(144, 144, 144, 0.24);
+		backdrop-filter: blur(5px);
+		padding: 10px;
+		border-radius: 20px;
+		border: 2px solid rgba(144, 144, 144, 0.14);
+		transition: all 0.3s ease 0s;
+	
+	}
+
+	.nova-description:hover {
+		border: 2px solid rgba(255, 255, 255, 0.24);
+
+	}
+
+</style>
